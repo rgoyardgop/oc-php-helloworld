@@ -13,7 +13,7 @@ $password = getenv("MYSQL_PWD");
 $hostname = getenv("MYSQL_HOST"); 
 $dbname = getenv("MYSQL_DB");
 
-echo "<ul>"
+echo "<ul>";
 echo "<li>MYSQL_USER:$username</li>";
 echo "<li>MYSQL_PWD:$password</li>";
 echo "<li>MYSQL_HOST:$hostname</li>";
