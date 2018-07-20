@@ -8,7 +8,7 @@
 	<h1><?php echo "MySQL"; ?></h1>
 	
 <?php
-$username = getenv("MYSQL_USER")
+$username = getenv("MYSQL_USER");
 $password = getenv("MYSQL_PWD");
 $hostname = getenv("MYSQL_HOST"); 
 $dbname = getenv("MYSQL_DB");
