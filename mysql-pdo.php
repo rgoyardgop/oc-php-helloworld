@@ -13,6 +13,8 @@ $password = getenv("MYSQL_PWD");
 $hostname = getenv("MYSQL_HOST"); 
 $dbname = getenv("MYSQL_DB");
 
+
+$db = new PDO("mysql:host=$hostname;dbname=$dbname;charset=utf8mb4", $username, $password);
 //connection to the database
 foreach($db->query('SELECT * FROM quote') as $row) {
     print_r($row);
