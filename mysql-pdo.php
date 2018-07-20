@@ -21,10 +21,10 @@ echo "<li>MYSQL_DB:$dbname</li>";
 echo "</ul>";
 
 $db = new PDO("mysql:host=$hostname;dbname=$dbname;charset=utf8mb4", $username, $password);
-echo $db;
+echo var_dump($db);
 //connection to the database
 $stmt = $db->query('SELECT id,msg FROM quote');
-echo $stmt;
+var_dump($stmt);
 
 while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 	print_r($row);
