@@ -9,7 +9,10 @@
 	<p>
 		<?php echo 'Version PHP courante : ' . phpversion();?>
 	</p>
-<hr />
-<?php phpinfo(); ?>
+	<p><a href="/mysql.php">Go To Mysql</a></p>
+	<hr />
+	<?php echo getenv("MYSQL_HOST");
+	<hr />
+	<?php phpinfo(); ?>
 </body>
 </html>
