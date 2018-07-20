@@ -38,7 +38,7 @@ try {
 	}
 
 } catch (PDOException $e) {
-    throw $e
+    throw $e;
 }
 
 ?>
