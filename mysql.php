@@ -5,7 +5,7 @@
 	<title>Hello <?php echo 'php'; ?></title>
 </head>
 <body>
-	<h1><?php echo "MySQL"; ?></h1>
+	<h1><?php echo "MySQL"; ?> - a</h1>
 	
 <?php
 $username = getenv("MYSQL_USER");
