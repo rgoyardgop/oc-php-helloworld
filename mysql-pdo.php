@@ -25,7 +25,9 @@ echo "<li>MYSQL_HOST:$hostname</li>";
 echo "<li>MYSQL_DB:$dbname</li>";
 echo "</ul>";
 try {
-    $db = new PDO("mysql:host=$hostname;dbname=$dbname;charset=utf8mb4", $username, $password);
+    $db = new PDO("mysql:host=$hostname;dbname=$dbname;charset=utf8mb4", $username, $password, array(
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+    ));
 
     echo var_dump($db);
 	//connection to the database
