@@ -7,7 +7,7 @@ error_reporting(E_ALL);
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Hello <?php echo 'php'; ?></title>
+	<title>Hello <?php echo 'php'; ?> </title>
 </head>
 <body>
 	<h1><?php echo "MySQL PDO"; ?></h1>
@@ -24,17 +24,23 @@ echo "<li>MYSQL_PWD:$password</li>";
 echo "<li>MYSQL_HOST:$hostname</li>";
 echo "<li>MYSQL_DB:$dbname</li>";
 echo "</ul>";
+try {
+    $db = new PDO("mysql:host=$hostname;dbname=$dbname;charset=utf8mb4", $username, $password);
 
-$db = new PDO("mysql:host=$hostname;dbname=$dbname;charset=utf8mb4", $username, $password);
-echo var_dump($db);
-//connection to the database
-$stmt = $db->query('SELECT id,msg FROM quote');
-var_dump($stmt);
+    echo var_dump($db);
+	//connection to the database
+	$stmt = $db->query('SELECT id,msg FROM quote');
+	var_dump($stmt);
 
-while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-	print_r($row);
-        echo '<br />';
+	while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+		print_r($row);
+	        echo '<br />';
+	}
+
+} catch (PDOException $e) {
+    throw $e
 }
+
 ?>
 </body>
 </html>
