@@ -16,9 +16,12 @@ $dbname = getenv("MYSQL_DB");
 
 $db = new PDO("mysql:host=$hostname;dbname=$dbname;charset=utf8mb4", $username, $password);
 //connection to the database
-foreach($db->query('SELECT * FROM quote') as $row) {
-    print_r($row);
-    echo '<br />';
+$stmt = $db->query('SELECT * FROM quote');
+echo $stmt;
+
+while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+	print_r($row);
+        echo '<br />';
 }
 ?>
 </body>
