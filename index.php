@@ -11,7 +11,7 @@
 	</p>
 	<p><a href="/mysql.php">Go To Mysql</a></p>
 	<hr />
-	<?php echo getenv("MYSQL_HOST");
+	<?php echo getenv("MYSQL_HOST"); ?>
 	<hr />
 	<?php phpinfo(); ?>
 </body>
