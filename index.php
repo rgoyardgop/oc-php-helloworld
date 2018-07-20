@@ -9,5 +9,7 @@
 	<p>
 		<?php echo 'Version PHP courante : ' . phpversion();?>
 	</p>
+<hr />
+<?php phpinfo(); ?>
 </body>
 </html>
