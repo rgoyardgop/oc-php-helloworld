@@ -24,7 +24,7 @@ $selected = mysql_select_db($dbname,$dbhandle)
 $result = mysql_query("SELECT * FROM quote");
 //fetch tha data from the database
 while ($row = mysql_fetch_array($result)) {
-   print_r($row)
+   print_r($row);
    echo "<br />";
 }
 mysql_close($dbhandle);
